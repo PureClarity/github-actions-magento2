@@ -95,6 +95,11 @@ runs:
       env:
         COMPOSER_CACHE_DIR: ${{ steps.composer-cache.outputs.dir }}
         COMPOSER_AUTH: ${{ inputs.composer_auth }}
+   
+    - run: cat composer.json
+      name: Output composer.json
+      working-directory:  ${{ inputs.magento_directory }}
+      shell: bash
 
 branding:
   icon: "code"
