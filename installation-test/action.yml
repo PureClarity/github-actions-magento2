@@ -82,7 +82,7 @@ runs:
       working-directory:  ${{ inputs.magento_directory }}
       shell: bash
       
-    - run: composer config --no-plugins allow-plugins true
+    - run: composer config --no-plugins allow-plugins.laminas/laminas-dependency-plugin true
       name: Allow all plugins for Testing
       working-directory:  ${{ inputs.magento_directory }}
       shell: bash
