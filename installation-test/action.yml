@@ -81,6 +81,11 @@ runs:
       name: Add Github Repo for Testing
       working-directory:  ${{ inputs.magento_directory }}
       shell: bash
+      
+    - run: composer config --no-plugins allow-plugins true
+      name: Allow all plugins for Testing
+      working-directory:  ${{ inputs.magento_directory }}
+      shell: bash
     
     - run: composer require ${{ inputs.package_name }} "dev-${{ github.sha }}" --no-update && composer install
       name: Require and attempt install
