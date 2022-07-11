@@ -82,7 +82,7 @@ runs:
       working-directory:  ${{ inputs.magento_directory }}
       shell: bash
       
-    - run: composer config allow-plugins true
+    - run: composer config --no-interaction allow-plugins true 
       if: ${{ inputs.composer_version > 2 }}
       name: Allow all plugins for Testing
       working-directory:  ${{ inputs.magento_directory }}
