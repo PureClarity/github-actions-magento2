@@ -54,7 +54,7 @@ runs:
       with:
         php-version: ${{ inputs.php_version }}
 
-    - run: composer self-update --${{ inputs.composer_version }}
+    - run: composer self-update ${{ inputs.composer_version }}
       name: Pin to Composer Version ${{ inputs.composer_version }}
       shell: bash
 
